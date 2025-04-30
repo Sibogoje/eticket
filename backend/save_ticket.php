@@ -1,7 +1,7 @@
 <?php
-header("Access-Control-Allow-Origin: *"); // Allow requests from any origin
-header("Access-Control-Allow-Methods: POST"); // Allow only POST requests
-header("Access-Control-Allow-Headers: Content-Type"); // Allow specific headers
+// header("Access-Control-Allow-Origin: *"); // Allow requests from any origin
+// header("Access-Control-Allow-Methods: POST"); // Allow only POST requests
+// header("Access-Control-Allow-Headers: Content-Type"); // Allow specific headers
 
 include 'connection.php'; // Include the reusable connection file
 
