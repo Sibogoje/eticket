@@ -5,6 +5,11 @@ header("Access-Control-Allow-Headers: Content-Type"); // Allow specific headers
 
 include 'connection.php'; // Include the reusable connection file
 
+// Enable error reporting for debugging
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve data from the POST request
     $ticket_number = $_POST['ticket_number'] ?? '';
@@ -22,14 +27,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
+    // Debugging: Log input data
+    file_put_contents('debug.log', "Input Data: " . json_encode($_POST) . "\n", FILE_APPEND);
+
     // Prepare and execute the SQL statement
     $stmt = $conn->prepare("INSERT INTO tickets (ticket_number, name, surname, phone_number, email, gender, age, ticket_type) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+    if (!$stmt) {
+        echo json_encode(['success' => false, 'message' => 'Failed to prepare statement: ' . $conn->error]);
+        exit;
+    }
+
     $stmt->bind_param("ssssssss", $ticket_number, $name, $surname, $phone_number, $email, $gender, $age, $ticket_type);
 
     if ($stmt->execute()) {
         echo json_encode(['success' => true, 'message' => 'Ticket saved successfully.']);
     } else {
-        echo json_encode(['success' => false, 'message' => 'Failed to save ticket.']);
+        echo json_encode(['success' => false, 'message' => 'Failed to save ticket: ' . $stmt->error]);
     }
 
     $stmt->close();
