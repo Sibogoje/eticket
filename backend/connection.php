@@ -1,7 +1,7 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
+$servername = "195.35.53.20";
+$username = "u747325399_eTicket";
+$password = "eTicket_123";
 $dbname = "lujuvents";
 
 // Create connection

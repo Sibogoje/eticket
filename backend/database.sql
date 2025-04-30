@@ -12,9 +12,9 @@ MySQL - 10.4.32-MariaDB : Database - lujuvents
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`lujuvents` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`u747325399_eTicket` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
 
-USE `lujuvents`;
+USE `u747325399_eTicket`;
 
 /*Table structure for table `admins` */
 
@@ -50,7 +50,7 @@ CREATE TABLE `tickets` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `ticket_number` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `tickets` */
 
@@ -59,7 +59,16 @@ insert  into `tickets`(`id`,`name`,`surname`,`phone_number`,`email`,`gender`,`ag
 (2,'Managliso','Shandu','7565968','manga@gmail.com','Female',23,'First Day','2025-04-13 16:49:57','LUJU-142072'),
 (3,'Managliso','Shandu','7565968','manga@gmail.com','Female',23,'First Day','2025-04-13 16:50:40','LUJU-176772'),
 (4,'Managliso','Shandu','7565968','manga@gmail.com','Female',23,'First Day','2025-04-13 16:50:43','LUJU-849584'),
-(5,'Andile','Sibandze','78216019','and@gmail.com','Female',34,'Second Day','2025-04-13 16:51:44','LUJU-156317');
+(5,'Andile','Sibandze','78216019','and@gmail.com','Female',34,'Second Day','2025-04-13 16:51:44','LUJU-156317'),
+(6,'Themeblihle ','Mbhamali','768888888','th@gmail.com','Male',32,'Both Days','2025-04-13 20:02:38','LUJU-968558'),
+(7,'Phumlile','Kuhlase','984859888','hhhh','Female',45,'First Day','2025-04-24 11:58:59','LUJU-226995'),
+(35,'yyyy','yyyy','45545455','sibonisolsibandze@gmail.com','Female',33,'First Day','2025-04-28 12:49:16','LUJU-574102'),
+(36,'fff','ffff','343433434','sibonisolsibandze@gmail.com','Female',44,'Second Day','2025-04-28 14:54:15','LUJU-578945'),
+(37,'ccccc','cccc','333333','sibonisolsibandze@gmail.com','Female',33,'Second Day','2025-04-28 15:01:50','LUJU-469315'),
+(38,'sdsds','ddsd','2323322','sibonisolsibandze@gmail.com','Female',33,'Second Day','2025-04-28 15:04:35','LUJU-240186'),
+(39,'fff','fff','ff','sibonisolsibandze@gmail.com','Female',22,'Second Day','2025-04-28 16:11:30','LUJU-722307'),
+(40,'fff','dddd','dddd','sibonisolsibandze@gmail.com','Other',33,'First Day','2025-04-28 16:15:06','LUJU-179204'),
+(41,'fff','ffff','234234342','sibonisolsibandze@gmail.com','Female',33,'Second Day','2025-04-28 16:19:50','LUJU-441314');
 
 /*Table structure for table `vendors` */
 

@@ -1,3 +1,3 @@
 class Config {
-  static const String baseUrl = 'http://192.168.100.39/eticket/backend'; // Replace with your machine's IP address
+  static const String baseUrl = 'https://grinpath.com/eticket/backend'; // Replace with your machine's IP address
 }
