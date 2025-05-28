@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $ticketPdf = $_FILES['ticket_pdf']['tmp_name'];
     $ticketPdfName = $_FILES['ticket_pdf']['name'];
 
-    $fromEmail = 'sibonisolsibandze@gmail.com'; // Replace with your Gmail address
+    $fromEmail = 'technoprintinvestments@gmail.com'; // Replace with your Gmail address
     $fromName = 'E-Ticket System';
     $subject = 'Your Ticket';
     $body = 'Please find your ticket attached.';
